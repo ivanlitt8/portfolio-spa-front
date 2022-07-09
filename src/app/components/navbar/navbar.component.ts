@@ -22,8 +22,20 @@ export class NavbarComponent implements OnInit {
     console.log(this.list?.nativeElement)
   }
 
-  // toggle(): void {
-  //   list.classList.toggle('menu_links--show');
+  // toggle(){
+  //   console.log('Hola')
   // }
 
+
+  // constructor(public elementRef: ElementRef) {
+
+  // }
+
+
+  toggle() {
+
+    const navbarToggler =
+      this.list?.nativeElement;
+        navbarToggler.classList.toggle('menu_links--show');
+  }
 }

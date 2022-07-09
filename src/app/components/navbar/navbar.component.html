@@ -22,7 +22,7 @@
                 <a href="/login.html" class="menu_link"><i class="fa-solid fa-arrow-right-to-bracket"></i></a>
             </li>
         </ul>
-        <div #menu class="menu_hamburguer">
+        <div #menu (click)="toggle()" class="menu_hamburguer" >
             <img src="/assets/resources/menu.svg" class="menu_img">
         </div>
     </section>
