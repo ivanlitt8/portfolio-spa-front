@@ -10,16 +10,16 @@ export class NavbarComponent implements OnInit {
   @ViewChild('menu',{static:true}) menu: ElementRef | undefined
   @ViewChild('list',{static:true}) list: ElementRef | undefined
 
-  @HostListener('window:resize', ['$event'])
-  onResize(event: { target: { innerWidth: any; }; }) {
-    if(event.target.innerWidth>800){
-      console.log('AAAAAAAAAA');
-    }
-  }
+  // @HostListener('window:resize', ['$event'])
+  // onResize(event: { target: { innerWidth: any; }; }) {
+  //   if(event.target.innerWidth>800){
+  //     console.log('AAAAAAAAAA');
+  //   }
+  // }
 
   ngOnInit(): void {
-    console.log(this.menu?.nativeElement)
-    console.log(this.list?.nativeElement)
+    // console.log(this.menu?.nativeElement)
+    // console.log(this.list?.nativeElement)
   }
 
   // toggle(){

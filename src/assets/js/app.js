@@ -1,4 +1,4 @@
-alert("app.js Works");
+// alert("app.js Works");
 
 // (function(){
 //     const list = document.querySelector('.menu_links');

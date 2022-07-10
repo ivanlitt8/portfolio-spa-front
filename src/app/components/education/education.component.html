@@ -1,0 +1,15 @@
+<section class="education">
+    <h3 class="tittle">Education</h3>                                                                                 
+    <div *ngFor="let education of educationList" class="education_grid">
+        <div class="educations">
+            <img [src]="education?.url">
+            <div class="educations_text">
+                <h4>{{education?.grade}}</h4>
+                <div class="education_data">
+                    <span>{{education?.place}}</span>
+                    <span>{{education?.start}} - {{education?.end}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

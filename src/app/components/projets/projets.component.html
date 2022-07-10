@@ -1,0 +1,26 @@
+<section class="projets">
+    <div class="projets_text">
+        <span>PORTFOLIO</span>
+        <h3 class="tittle">My projects</h3>
+        <p>
+            Here you can see some of my personal projects that I have developed with different technologies and uses.
+        </p>
+    </div>
+    <div class="projets_grid">
+        <div class="container_projects">
+            <ng-container *ngFor="let projet of projetsList">
+                <div class="projets_card">
+                    <span class="projet_date">{{projet.date}}</span>
+                    <img [src]="projet.img" alt="project one">
+                    <div class="projets_card_text">
+                        <h4>{{projet.tittle}}</h4>
+                        <p>
+                            {{projet.description}}
+                        </p>
+                        <a [href]="projet.url"><span>See More ></span></a>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>        
+</section>
