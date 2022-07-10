@@ -1,0 +1,49 @@
+/*---------------------------Services---------------------------*/
+
+.services h3{
+    position: relative;
+    top: -950px;
+    text-align: center;
+    color: white;
+  }
+  .services_grid{
+    width: 80%;
+    gap: 20px;
+    position: relative;
+    top: -900px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: center;
+  }
+  .service{
+    display: flex;
+    width: 250px;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2D2C32;
+    border-radius: 20px;
+    height: 300px;
+    padding: 40px 0;
+  }
+  .service:hover{
+    transition-duration: .5s;
+    background-color: #292664;
+    box-shadow: 10px 10px;
+  }
+  .service i {
+    color: #F76525;
+    font-size: 80px;
+  }
+  .service h5{
+    padding-top: 24px;
+    font-size: 24px;
+    color: white;
+  }
+  .service p{
+    padding-top: 10px;
+    color: white;
+    width: 70%;
+    font-size: 16px;
+  }
+  

@@ -1,0 +1,236 @@
+/*---------------------------Skills---------------------------*/
+
+.skills{
+    width: 100%;
+  }
+  
+  .skills h3{
+    position: relative;
+    top: -1370px;
+    text-align: center;
+    color: white;
+  }
+  
+  .grid img{
+    width: 100px;
+  }
+  .grid{
+    position:relative;
+    top: -1350px;
+    margin: 0 auto;
+    width: 70%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+  }
+  .grid div{
+    justify-items: center;
+    display: grid;
+    row-gap: 10px;
+  }
+  .grid_frontend{
+    grid-template-columns: 40% 40%;
+    justify-content: center;
+  }
+  .grid_backend {
+    position: absolute;
+    top: 50px;
+  }
+  .grid_db {
+    position: absolute;
+    top: 240px;
+  }
+
+  /*---------------------------Spinner---------------------------*/
+
+.skill {
+    height: 120px;
+  }
+  .outer{
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    padding: 20px;
+  }
+  .inner{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #number{
+    color: #555;
+    font-weight: 600;
+  }
+  circle{
+    fill: none;
+    stroke: url(#GradientColor1);
+    stroke-width: 10px;
+    stroke-dasharray: 472;
+    stroke-dashoffset: 472;
+  }
+  .rowOne{
+    position: absolute;
+    top: 75px;
+  }
+  .myjava_progress{
+    position: absolute;
+    top: 25px;
+  }
+  .rowTwo{
+    position: absolute;
+    top: 200px;
+  }
+  .rowThree{
+    position: absolute;
+    top: 330px;
+  }
+  .mysql_progress {
+    position: absolute;
+    top: 25px; 
+  }
+  .figma{
+    animation: figma 2s linear forwards;
+  } 
+  .postman{
+    animation: postman 2s linear forwards;
+  } 
+  .other{
+    animation: anim 2s linear forwards;
+  }
+  .github{
+    animation: github 2s linear forwards;
+  }
+  .angular{
+    animation: angular 2s linear forwards;
+  }
+  .bootstrap{
+    animation: bootstrap 2s linear forwards;
+  }
+  .jquery{
+    animation: jquery 2s linear forwards;
+  }
+  .javascript{
+    animation: javascript 2s linear forwards;
+  }
+  .css{
+    animation: css 2s linear forwards;
+  }
+  .html{
+    animation: html 2s linear forwards;
+  }
+  .java{
+    animation: java 2s linear forwards;
+  }
+  .mysql{
+    animation: mysql 2s linear forwards;
+  } 
+  
+  /*---------------------------KeyFrames---------------------------*/
+  
+  @keyframes mysql {
+    100%{
+      stroke-dashoffset: 270;
+    }
+  }
+  @keyframes java {
+    100%{
+        stroke-dashoffset: 379;
+    }
+  }
+  @keyframes figma {
+    100%{
+        stroke-dashoffset: 224;
+    }
+  }
+  @keyframes postman {
+    100%{
+        stroke-dashoffset: 255;
+    }
+  }
+  @keyframes github {
+    100%{
+        stroke-dashoffset: 270;
+    }
+  }
+  @keyframes angular {
+    100%{
+        stroke-dashoffset: 317;
+    }
+  }
+  @keyframes bootstrap {
+    100%{
+      stroke-dashoffset: 210;
+    }
+  }
+  @keyframes jquery {
+    100%{
+        stroke-dashoffset: 193;
+    }
+  }
+  @keyframes javascript {
+    100%{
+        stroke-dashoffset: 239;
+    }
+  }
+  @keyframes css {
+    100%{
+        stroke-dashoffset: 200;
+    }
+  }
+  @keyframes html {
+    100%{
+        stroke-dashoffset: 162;
+    }
+  }
+
+@media screen and (max-width: 800px){
+    .grid{
+        width: 100%;
+        top: -1400px;
+    }
+    .skills_1 {
+        width: 85%;
+        top: -1420px;
+    }
+    .skills h3 {
+        top: -1420px;
+    }
+}
+
+@media screen and (max-width: 650px){
+    .rowOne{
+    top: 70px;
+  }
+  .grid{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .grid_backend{
+    position: relative;
+    top: 0px;
+  }
+  .grid_db{
+    position: relative;
+    top: 0px;
+  }
+  .grid_frontend {
+    position: relative;
+  }
+  .gridFend h4 {
+    position: relative;
+    top: 30px;
+  }
+  .grid_back h4{
+    position: relative;
+    top: 30px;
+  }
+  .grid_frontend svg{
+    position: relative;
+    top: -125px;
+  }
+}

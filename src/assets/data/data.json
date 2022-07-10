@@ -103,5 +103,26 @@
 		"job": "Analyst",
 		"site": "Idesing",
 		"desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo."
+	}],
+	"percent": [{
+		"tools": [{
+			"percent1": "255",
+			"percent2": "224",
+			"percent3": "270" 	
+		}],
+		"front": [{
+			"percent1": "317",
+			"percent2": "210",
+			"percent3": "193",
+			"percent4": "239",
+			"percent5": "200",
+			"percent6": "162"
+		}],
+		"back": [{
+			"percent1": "379"
+		}],
+		"db": [{
+			"percent1": "270"
+		}]
 	}]
 }

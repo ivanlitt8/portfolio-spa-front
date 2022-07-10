@@ -1,0 +1,71 @@
+/*---------------------------Education---------------------------*/
+
+.education h3{
+  position: relative;
+  top: -750px;
+  text-align: left;
+  color: white;
+  margin-left: 10%;
+}
+.education_grid img{
+  width: 100px;
+  height: auto;
+}
+.educations{
+  position: relative;
+  top: -700px;
+  display: grid;
+  grid-template-columns: 20% auto;
+  gap: 20px;
+  width: 70%;
+  margin: 0 auto;
+  align-items: center;
+  height: 130px;
+}
+.educations_text{
+  text-align: left;
+  color: white;
+}
+.educations_text h4{
+  color: #F76525;
+  font-size: 1.5em;
+}
+.education_data{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.educations img{
+  margin: 0 auto;
+}
+@media screen and (max-width: 800px){
+
+    .education_data span{
+        font-size: 14px;
+    }
+    .educations_text h4{
+        font-size: 18px;
+    }
+    .educations img{
+        width: 75px;
+    }
+    .educations{
+        gap: 30px;
+    }
+}
+@media screen and (max-width: 650px){
+
+    .educations{
+        width: 90%;
+    }  
+    .education_data span{
+        font-size: 12px;
+    }
+    .educations_text h4{
+        font-size: 16px;
+    }
+    .experience_text p{
+        width: 85%;
+    }
+}
