@@ -13,6 +13,11 @@ import { EducationComponent } from './components/education/education.component';
 import { ExperienceComponent } from './components/experience/experience.component';
 import { CopyrightComponent } from './components/copyright/copyright.component';
 import { IdiomComponent } from './components/idiom/idiom.component';
+import { LoginComponent } from './components/login/login.component';
+import { RouterModule, Routes } from '@angular/router';
+const appRoutes: Routes =[
+  {path:'login', component: LoginComponent},
+]
 
 @NgModule({
   declarations: [
@@ -25,12 +30,14 @@ import { IdiomComponent } from './components/idiom/idiom.component';
     EducationComponent,
     ExperienceComponent,
     CopyrightComponent,
-    IdiomComponent
+    IdiomComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
