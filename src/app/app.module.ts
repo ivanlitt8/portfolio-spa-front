@@ -15,6 +15,10 @@ import { CopyrightComponent } from './components/copyright/copyright.component';
 import { IdiomComponent } from './components/idiom/idiom.component';
 import { LoginComponent } from './components/login/login.component';
 import { RouterModule, Routes } from '@angular/router';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { ReactiveFormsModule } from '@angular/forms';
 const appRoutes: Routes =[
   {path:'login', component: LoginComponent},
 ]
@@ -37,7 +41,10 @@ const appRoutes: Routes =[
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    RouterModule.forRoot(appRoutes)
+    ReactiveFormsModule,
+    RouterModule.forRoot(appRoutes),
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth())
   ],
   providers: [],
   bootstrap: [AppComponent]
