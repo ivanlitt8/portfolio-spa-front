@@ -1,20 +1,33 @@
 <body>
     <div class="center">
         <h1>Welcome to your Portfolio</h1>
-        <a href="#"><i class="fa-solid fa-circle-xmark"></i></a>
+        <a routerLink="/portfolio"><i class="fa-solid fa-circle-xmark"></i></a>
         <form [formGroup]="formLogin" (submit)="send()">
             <div class="txt_field">
-                <input type="text" formControlName="email">
+                <input type="email" formControlName="email">
                 <span></span>
                 <label>Email</label>
+                <div *ngIf="Email?.errors && Email?.touched">
+                    <p *ngIf="Email?.hasError('required')" class="text-danger">
+                        Email is required
+                    </p>
+                    <p *ngIf="Email?.hasError('email')" class="text-danger">
+                        The email format must be valid
+                    </p>                
+                </div>
             </div>
             <div class="txt_field">
                 <input type="password" formControlName="password">
                 <span></span>
                 <label>Password</label>
+                <div *ngIf="Password?.errors && Password?.touched">
+                    <p *ngIf="Password?.hasError('required')" class="text-danger">
+                        Password is required
+                    </p>             
+                </div>
             </div>
             <div class="pass">Forgot password?</div>
-            <input type="submit" value="Login" [disabled]="formLogin.invalid">
+            <input class="submitButton" type="submit" value="Login" [disabled]="formLogin.invalid">
             <span class="copyright">© Ivan Litt - All rights reserved</span>
         </form>
     </div>

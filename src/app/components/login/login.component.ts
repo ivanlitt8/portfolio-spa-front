@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { UserServiceService } from 'src/app/services/user-service.service'
+import { Router } from '@angular/router';
+import { UserServiceService } from 'src/app/services/user-service.service';
 
 @Component({
   selector: 'app-login',
@@ -8,10 +9,13 @@ import { UserServiceService } from 'src/app/services/user-service.service'
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  
 
   public formLogin!: FormGroup;
 
-  constructor(private formBuilder: FormBuilder, private userService: UserServiceService) { }
+  constructor(
+    private formBuilder: FormBuilder,
+    private userService: UserServiceService, private rout: Router) { }
 
   ngOnInit(): void {
     this.formLogin = this.formBuilder.group( {
@@ -20,15 +24,26 @@ export class LoginComponent implements OnInit {
     })
   }
 
+  get Email(){
+    return this.formLogin.get('email');
+  }
+
+  get Password(){
+    return this.formLogin.get('password');
+  }
+
   send():any{
+
+    let datitos: {};
+
     this.userService.login(this.formLogin.value)
       .then(response=>{
-        console.log(response);
+        console.log('**----------**',response.user.uid);
+        this.rout.navigate(['/portfolio']);
+        datitos = JSON.stringify(response);
+        console.log(datitos);
       })
-      .catch(error=>{
-        console.log('AAAAAAAAAAAAAAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaAAAAA')
-        console.log(error)
-      })
+      .catch(error=>console.log(error));
   };
 
 }

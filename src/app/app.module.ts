@@ -19,6 +19,7 @@ import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { ReactiveFormsModule } from '@angular/forms';
+import { PortfolioComponent } from './components/portfolio/portfolio.component';
 const appRoutes: Routes =[
   {path:'login', component: LoginComponent},
 ]
@@ -35,7 +36,8 @@ const appRoutes: Routes =[
     ExperienceComponent,
     CopyrightComponent,
     IdiomComponent,
-    LoginComponent
+    LoginComponent,
+    PortfolioComponent
   ],
   imports: [
     BrowserModule,
