@@ -20,8 +20,16 @@ import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { EditExperienceComponent } from './components/edit-experience/edit-experience.component';
+import { EditEducationComponent } from './components/edit-education/edit-education.component';
+import { EditIdiomComponent } from './components/edit-idiom/edit-idiom.component';
+import { EditLandingComponent } from './components/edit-landing/edit-landing.component';
+import { EditProjetComponent } from './components/edit-projet/edit-projet.component';
+import { EditServiceComponent } from './components/edit-service/edit-service.component';
+
+
 const appRoutes: Routes =[
-  {path:'login', component: LoginComponent},
+  // {path:'login', component: LoginComponent},
 ]
 
 @NgModule({
@@ -37,7 +45,13 @@ const appRoutes: Routes =[
     CopyrightComponent,
     IdiomComponent,
     LoginComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    EditExperienceComponent,
+    EditEducationComponent,
+    EditIdiomComponent,
+    EditLandingComponent,
+    EditProjetComponent,
+    EditServiceComponent,
   ],
   imports: [
     BrowserModule,
