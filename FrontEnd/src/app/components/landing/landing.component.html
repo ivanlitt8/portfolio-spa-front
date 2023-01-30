@@ -1,16 +1,15 @@
 <section class="containerLanding">
     <div class="about">
-        <div class="about_stack"><h2>{{persona.nombre}}<!--{{miPortfolio?.position}}--></h2></div> 
-        <div class="about_nombre"><h1>{{persona.nombre}}<!--{{miPortfolio?.name}}--></h1></div>
+        <div class="about_stack"><h2>{{persona.posicion}}</h2></div> 
+        <div class="about_nombre"><h1>{{persona.nombre}} {{persona.apellido}}</h1></div>
         <div class="about_bar"></div>
         <div class="about_text">
             <p>
-                Hello! I am an academic and self-taught student of computer technologies, specialized in web development.
-                I hope you enjoy your walk in my portfolio, with it you can get to know me better and if you wish you can also contact me, you can download my CV <a download="CV_Ivan_Litt" href="/assets/resources/download/CV_IvanLitt(ES).pdf">here</a>.
+                {{persona.sobreMi}} <a download="CV_Ivan_Litt" href="/assets/resources/download/CV_IvanLitt(ES).pdf">here</a>.
             </p>
         </div>
         <div class="about_locate">
-            <i class="fa-solid fa-street-view"></i><span>{{persona.nombre}}<!--{{miPortfolio?.ubication}}--></span>
+            <i class="fa-solid fa-street-view"></i><span> {{persona.ubicacion}}</span>
         </div>        
     </div>
     <img class="miguel" src="/assets/resources/miguelPng.png" alt="LandingImg">

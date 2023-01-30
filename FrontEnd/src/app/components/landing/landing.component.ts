@@ -10,19 +10,12 @@ import { PersonaService } from 'src/app/services/persona.service';
 })
 export class LandingComponent implements OnInit {
   
-  persona: persona = new persona("","","");
+  persona: persona = new persona("","","","","","");
 
-  //miPortfolio:any;
-
-  // constructor(private datosPortfolio:PortfolioService) { }
   constructor(public personaService: PersonaService) { }
 
 
   ngOnInit(): void {
-    // this.datosPortfolio.obtenerDatos().subscribe((data:any)=>{
-    //     this.miPortfolio = data;
-    // });
-
       this.personaService.getPersona().subscribe(data => {
         this.persona = data
       })

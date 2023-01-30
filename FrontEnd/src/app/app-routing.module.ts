@@ -10,7 +10,7 @@ import { EditProjetComponent } from './components/edit-projet/edit-projet.compon
 import { EditServiceComponent } from './components/edit-service/edit-service.component';
 
 const routes: Routes = [
-  {path:'portfolio', component: PortfolioComponent},
+  {path:'', component: PortfolioComponent},
   {path:'iniciar-sesion', component: LoginComponent},
   {path:'edit-experience', component: EditExperienceComponent},
   {path:'edit-education', component: EditEducationComponent},
