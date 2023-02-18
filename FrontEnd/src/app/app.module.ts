@@ -13,10 +13,10 @@ import { CopyrightComponent } from './components/copyright/copyright.component';
 import { IdiomComponent } from './components/idiom/idiom.component';
 import { LoginComponent } from './components/login/login.component';
 import { RouterModule, Routes } from '@angular/router';
-import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
-import { provideAuth,getAuth } from '@angular/fire/auth';
-import { ReactiveFormsModule } from '@angular/forms';
+import { provideAuth, getAuth } from '@angular/fire/auth';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { EditExperienceComponent } from './components/edit-experience/edit-experience.component';
 import { EditEducationComponent } from './components/edit-education/edit-education.component';
@@ -25,9 +25,10 @@ import { EditLandingComponent } from './components/edit-landing/edit-landing.com
 import { EditProjetComponent } from './components/edit-projet/edit-projet.component';
 import { EditServiceComponent } from './components/edit-service/edit-service.component';
 import { HttpClientModule } from '@angular/common/http';
+import { interceptorProvider } from './services/interceptor-service';
 
 
-const appRoutes: Routes =[
+const appRoutes: Routes = [
   // {path:'login', component: LoginComponent},
 ]
 
@@ -57,11 +58,14 @@ const appRoutes: Routes =[
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+    FormsModule,
     RouterModule.forRoot(appRoutes),
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth())
   ],
-  providers: [],
+  providers: [
+    interceptorProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

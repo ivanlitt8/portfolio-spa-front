@@ -2,7 +2,7 @@
 package com.portfolio.demo.Security.Service;
 
 import com.portfolio.demo.Security.Entity.Usuario;
-import com.portfolio.demo.Secutity.Repository.iUsuarioRepository;
+import com.portfolio.demo.Security.Repository.iUsuarioRepository;
 import jakarta.transaction.Transactional;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;

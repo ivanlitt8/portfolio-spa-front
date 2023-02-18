@@ -1,5 +1,5 @@
 
-package com.portfolio.demo.Secutity.Repository;
+package com.portfolio.demo.Security.Repository;
 
 import com.portfolio.demo.Security.Entity.Rol;
 import com.portfolio.demo.Security.Enums.RolNombre;

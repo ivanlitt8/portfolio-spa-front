@@ -30,7 +30,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping
+@RequestMapping("/auth")
 @CrossOrigin
 public class AuthController {
     
@@ -46,7 +46,7 @@ public class AuthController {
     @Autowired
     RolService rolService;
    
-    @Autowired
+     @Autowired
     JwtProvider jwtProvider;
     
     @PostMapping("/nuevo")
@@ -80,9 +80,9 @@ public class AuthController {
     public ResponseEntity<JwtDto> login(@Valid @RequestBody LoginUsuario loginUsuario, BindingResult bindingResult){
         if(bindingResult.hasErrors())
             return new ResponseEntity(new Mensaje("Campos mal puestos"),HttpStatus.BAD_REQUEST);
-       
+        
         Authentication authentication = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(
-        loginUsuario.getNombreUsuario(),loginUsuario.getPassword()));
+                loginUsuario.getNombreUsuario(),loginUsuario.getPassword()));
         
         SecurityContextHolder.getContext().setAuthentication(authentication);
         

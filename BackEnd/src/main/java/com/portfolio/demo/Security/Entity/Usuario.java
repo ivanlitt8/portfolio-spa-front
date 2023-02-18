@@ -14,10 +14,6 @@ import jakarta.validation.constraints.NotNull;
 import java.util.HashSet;
 import java.util.Set;
 
-/**
- *
- * @author ivanl
- */
 
 @Entity
 public class Usuario {

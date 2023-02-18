@@ -3,7 +3,7 @@ package com.portfolio.demo.Security.Service;
 
 import com.portfolio.demo.Security.Entity.Rol;
 import com.portfolio.demo.Security.Enums.RolNombre;
-import com.portfolio.demo.Secutity.Repository.iRolRepository;
+import com.portfolio.demo.Security.Repository.iRolRepository;
 import jakarta.transaction.Transactional;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;

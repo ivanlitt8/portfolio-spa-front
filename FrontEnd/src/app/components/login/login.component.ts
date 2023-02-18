@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { LoginUsuario } from 'src/app/model/login-usuario';
+import { AuthService } from 'src/app/services/auth.service';
+import { TokenService } from 'src/app/services/token.service';
 import { UserServiceService } from 'src/app/services/user-service.service';
 
 @Component({
@@ -9,41 +12,44 @@ import { UserServiceService } from 'src/app/services/user-service.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  
+  isLogged = false;
+  isLogginFail = false;
+  loginUsuario!: LoginUsuario;
+  nombreUsuario!: string;
+  password!: string;
+  roles: string[] = [];
+  errMsj!: string;
 
   public formLogin!: FormGroup;
 
-  constructor(
-    private formBuilder: FormBuilder,
-    private userService: UserServiceService, private rout: Router) { }
+  constructor(private tokenService: TokenService, private authService: AuthService, private router: Router) {
+
+  }
 
   ngOnInit(): void {
-    this.formLogin = this.formBuilder.group( {
-      email: ['',[Validators.required, Validators.email]],
-      password : ['', [Validators.required, Validators.minLength(6)]]
+    if (this.tokenService.getToken()) {
+      this.isLogged = true;
+      this.isLogginFail = false;
+      this.roles = this.tokenService.getAuthorities();
+    }
+  }
+
+  onLogin(): void {
+    this.loginUsuario = new LoginUsuario(this.nombreUsuario, this.password);
+    this.authService.login(this.loginUsuario).subscribe(data => {
+      this.isLogged = true;
+      this.isLogginFail = false;
+      this.tokenService.setToken(data.token);
+      this.tokenService.setUsername(data.nombreUsuario);
+      this.tokenService.setAuthorities(data.authorities);
+      this.roles = data.authorities;
+      this.router.navigate([''])
+    }, err => {
+      this.isLogged = false;
+      this.isLogginFail = true;
+      this.errMsj = err.error.mensaje;
+      console.log(this.errMsj);
     })
   }
-
-  get Email(){
-    return this.formLogin.get('email');
-  }
-
-  get Password(){
-    return this.formLogin.get('password');
-  }
-
-  send():any{
-
-    let datitos: {};
-
-    this.userService.login(this.formLogin.value)
-      .then(response=>{
-        console.log('**----------**',response.user.uid);
-        this.rout.navigate(['/portfolio']);
-        datitos = JSON.stringify(response);
-        console.log(datitos);
-      })
-      .catch(error=>console.log(error));
-  };
 
 }
