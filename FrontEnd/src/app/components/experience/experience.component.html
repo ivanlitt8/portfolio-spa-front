@@ -1,21 +1,29 @@
 <section class="experience">
-    <h3 class="tittle">Experiences</h3>
+    <h3 class="tittle">Experiences<a routerLink="/nuevaexp" *ngIf="isLogged">
+            <i class="fa-solid fa-circle-plus"></i></a>
+    </h3>
     <div class="experience_text">
         <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam,
-            purus sit amet luctus venenatis, lectus magna fringilla urna, 
+            purus sit amet luctus venenatis, lectus magna fringilla urna,
             Porttitor rhoncus dolor purus non enim praesent elementum facilisis leo,
             vel fringilla est ullamcorper.
         </p>
     </div>
     <div class="experience_grid">
-        <ng-container *ngFor="let experience of experienceList">
+        <ng-container *ngFor="let Experiencia of expe">
             <div class="experience_card">
-                <span>{{experience.start}} - {{experience.end}}</span>
-                <h4>{{experience.job}}</h4>
-                <span class="experience_place">{{experience.site}}</span>
+                <a routerLink="/editexp/{{Experiencia.id}}" *ngIf="isLogged">
+                    <i class="fa-regular fa-pen-to-square"></i>
+                </a>
+                <span>FECHA INICIO - FECHA FIN</span>
+                <h4>{{Experiencia.nombreE}}</h4>
+                <span class="experience_place">PUESTO EJEMPLO</span>
+                <a (click)="delete(Experiencia.id)" *ngIf="isLogged">
+                    <i class="fa-solid fa-trash-can"></i>
+                </a>
                 <p>
-                    {{experience.desc}}
+                    {{Experiencia.descripcionE}}
                 </p>
             </div>
         </ng-container>

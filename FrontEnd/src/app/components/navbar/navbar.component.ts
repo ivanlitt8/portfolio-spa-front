@@ -32,7 +32,6 @@ export class NavbarComponent implements OnInit {
 
 
   toggle() {
-
     const navbarToggler =
       this.list?.nativeElement;
     navbarToggler.classList.toggle('menu_links--show');

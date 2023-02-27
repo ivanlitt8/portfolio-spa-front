@@ -18,18 +18,13 @@ import { environment } from '../environments/environment';
 import { provideAuth, getAuth } from '@angular/fire/auth';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
-import { EditExperienceComponent } from './components/edit-experience/edit-experience.component';
-import { EditEducationComponent } from './components/edit-education/edit-education.component';
-import { EditIdiomComponent } from './components/edit-idiom/edit-idiom.component';
-import { EditLandingComponent } from './components/edit-landing/edit-landing.component';
-import { EditProjetComponent } from './components/edit-projet/edit-projet.component';
-import { EditServiceComponent } from './components/edit-service/edit-service.component';
 import { HttpClientModule } from '@angular/common/http';
 import { interceptorProvider } from './services/interceptor-service';
+import { NewExperienceComponent } from './components/experience/new-experience.component';
+import { EditExperienceComponent } from './components/experience/edit-experience.component';
 
 
 const appRoutes: Routes = [
-  // {path:'login', component: LoginComponent},
 ]
 
 @NgModule({
@@ -47,11 +42,7 @@ const appRoutes: Routes = [
     LoginComponent,
     PortfolioComponent,
     EditExperienceComponent,
-    EditEducationComponent,
-    EditIdiomComponent,
-    EditLandingComponent,
-    EditProjetComponent,
-    EditServiceComponent,
+    NewExperienceComponent,
   ],
   imports: [
     BrowserModule,
