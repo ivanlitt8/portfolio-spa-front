@@ -16,9 +16,9 @@
                 <a routerLink="/editexp/{{Experiencia.id}}" *ngIf="isLogged">
                     <i class="fa-regular fa-pen-to-square"></i>
                 </a>
-                <span>FECHA INICIO - FECHA FIN</span>
+                <span>{{Experiencia.fechaInicioE}} - {{Experiencia.fechaFinE}}</span>
                 <h4>{{Experiencia.nombreE}}</h4>
-                <span class="experience_place">PUESTO EJEMPLO</span>
+                <span class="experience_place">{{Experiencia.cargoE}}</span>
                 <a (click)="delete(Experiencia.id)" *ngIf="isLogged">
                     <i class="fa-solid fa-trash-can"></i>
                 </a>

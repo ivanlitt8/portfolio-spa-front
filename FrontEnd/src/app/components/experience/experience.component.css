@@ -94,9 +94,10 @@ i.fa-regular.fa-pen-to-square:hover {
 i.fa-solid.fa-trash-can {
   color: white;
   font-size: 26px;
+  float: right;
   position: relative;
   top: 200px;
-  left: 120px;
+  left: 10px;
 }
 
 i.fa-solid.fa-trash-can:hover {

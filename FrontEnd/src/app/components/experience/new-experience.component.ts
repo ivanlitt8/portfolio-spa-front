@@ -11,13 +11,16 @@ import { SExperienciaService } from 'src/app/services/s-experiencia.service';
 export class NewExperienceComponent implements OnInit {
   nombreE: string = '';
   descripcionE: string = '';
+  fechaInicioE: string = '';
+  fechaFinE: string = '';
+  cargoE: string = '';
   constructor(private sExperiencia: SExperienciaService, private router: Router) { }
 
   ngOnInit(): void {
   }
 
   onCreate(): void {
-    const expe = new Experiencia(this.nombreE, this.descripcionE);
+    const expe = new Experiencia(this.nombreE, this.descripcionE, this.fechaInicioE, this.fechaFinE, this.cargoE);
     this.sExperiencia.save(expe).subscribe(
       data => {
         alert("Experiencia agregada");
