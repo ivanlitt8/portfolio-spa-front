@@ -1,11 +1,19 @@
 <section class="services">
-    <h3 id="sec1" class="tittle">Services</h3>
+    <h3 id="sec1" class="tittle">Services<a routerLink="/nuevoserv" *ngIf="isLogged">
+            <i class="fa-solid fa-circle-plus"></i></a>
+    </h3>
     <div class="services_grid">
-        <ng-container *ngFor="let service of services">
+        <ng-container *ngFor="let Servicio of servicio">
             <div class="service">
-                <i class={{service.icon}}></i>
-                <h5>{{service.service}}</h5>
-                <p>{{service.text}}</p>
+                <a (click)="delete(Servicio.id)" *ngIf="isLogged">
+                    <i class="fa-solid fa-trash-can"></i>
+                </a>
+                <!-- <i class={{service.icon}}></i> -->
+                <a routerLink="/editserv/{{Servicio.id}}" *ngIf="isLogged">
+                    <i class="fa-regular fa-pen-to-square"></i>
+                </a>
+                <h5>{{Servicio.nombreS}}</h5>
+                <p>{{Servicio.descripcionS}}</p>
             </div>
         </ng-container>
     </div>

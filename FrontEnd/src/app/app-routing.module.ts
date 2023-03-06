@@ -6,6 +6,8 @@ import { NewExperienceComponent } from './components/experience/new-experience.c
 import { EditExperienceComponent } from './components/experience/edit-experience.component';
 import { NewEducationComponent } from './components/education/new-education.component';
 import { EditEducationComponent } from './components/education/edit-education.component';
+import { NewServiceComponent } from './components/services/new-service.component';
+import { EditServiceComponent } from './components/services/edit-service.component';
 
 const routes: Routes = [
   { path: '', component: PortfolioComponent },
@@ -14,6 +16,8 @@ const routes: Routes = [
   { path: 'editexp/:id', component: EditExperienceComponent },
   { path: 'nuevaedu', component: NewEducationComponent },
   { path: 'editedu/:id', component: EditEducationComponent },
+  { path: 'nuevoserv', component: NewServiceComponent },
+  { path: 'editserv/:id', component: EditServiceComponent },
   { path: '', redirectTo: 'portfolio', pathMatch: 'full' }
 ];
 

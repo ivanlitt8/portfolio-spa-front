@@ -2,37 +2,29 @@
 package com.portfolio.demo.Dto;
 
 import jakarta.validation.constraints.NotBlank;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter @Setter
 public class dtoEducacion { 
     
     @NotBlank
     private String nombreE;
     @NotBlank
     private String descripcionE;
+    @NotBlank
+    private String fechaInicioE;
+    
+    private String fechaFinE;
 
     public dtoEducacion() {
     }
 
-    public dtoEducacion(String nombreE, String descripcionE) {
+    public dtoEducacion(String nombreE, String descripcionE, String fechaInicioE, String fechaFinE) {
         this.nombreE = nombreE;
         this.descripcionE = descripcionE;
-    }
-
-    public String getNombreE() {
-        return nombreE;
-    }
-
-    public void setNombreE(String nombreE) {
-        this.nombreE = nombreE;
-    }
-
-    public String getDescripcionE() {
-        return descripcionE;
-    }
-
-    public void setDescripcionE(String descripcionE) {
-        this.descripcionE = descripcionE;
-    }
-    
+        this.fechaInicioE = fechaInicioE;
+        this.fechaFinE = fechaFinE;
+    }    
     
 }

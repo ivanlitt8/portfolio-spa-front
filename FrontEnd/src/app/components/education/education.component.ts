@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Education } from 'src/app/model/education';
-// import { PortfolioService } from 'src/app/services/portfolio.service';
 import { SEducacionService } from 'src/app/services/s-educacion.service';
 import { TokenService } from 'src/app/services/token.service';
 

@@ -19,6 +19,7 @@
 }
 
 .service {
+  position: relative;
   display: flex;
   width: 250px;
   flex-direction: column;
@@ -35,10 +36,10 @@
   box-shadow: 10px 10px;
 }
 
-.service i {
+/* .service i {
   color: #F76525;
   font-size: 80px;
-}
+} */
 
 .service h5 {
   padding-top: 24px;
@@ -50,9 +51,58 @@
   padding-top: 10px;
   color: white;
   width: 70%;
-  font-size: 16px;
+  font-size: 13px;
 }
 
 .tittle {
   font-size: 40px;
+}
+
+i.fa-solid.fa-circle-plus {
+  color: white;
+  margin-left: 20px;
+}
+
+i.fa-solid.fa-circle-plus:hover {
+  color: orangered;
+  transition: 0.5s;
+}
+
+
+i.fa-solid.fa-trash-can {
+  position: absolute;
+  top: 270px;
+  right: -5px;
+  float: right;
+  color: white;
+  font-size: 36px;
+}
+
+i.fa-solid.fa-trash-can:hover {
+  transition: 0.7s;
+  color: orangered;
+  rotate: 45deg;
+}
+
+i.fa-regular.fa-pen-to-square {
+  position: absolute;
+  top: -10px;
+  right: -5px;
+  color: white;
+  font-size: 36px;
+}
+
+i.fa-regular.fa-pen-to-square {
+  position: absolute;
+  top: -10px;
+  right: -5px;
+  color: white;
+  font-size: 36px;
+}
+
+i.fa-regular.fa-pen-to-square:hover {
+  color: orangered;
+  transition: 0.2s;
+  transform: translate(5px);
+  transform: scale(1.1);
 }

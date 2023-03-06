@@ -24,6 +24,8 @@ import { NewExperienceComponent } from './components/experience/new-experience.c
 import { EditExperienceComponent } from './components/experience/edit-experience.component';
 import { NewEducationComponent } from './components/education/new-education.component';
 import { EditEducationComponent } from './components/education/edit-education.component';
+import { NewServiceComponent } from './components/services/new-service.component';
+import { EditServiceComponent } from './components/services/edit-service.component';
 
 
 const appRoutes: Routes = [
@@ -47,6 +49,8 @@ const appRoutes: Routes = [
     NewExperienceComponent,
     NewEducationComponent,
     EditEducationComponent,
+    NewServiceComponent,
+    EditServiceComponent,
   ],
   imports: [
     BrowserModule,

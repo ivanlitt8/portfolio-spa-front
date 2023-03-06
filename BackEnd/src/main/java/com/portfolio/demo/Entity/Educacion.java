@@ -8,8 +8,10 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import lombok.Getter;
+import lombok.Setter;
 
-
+@Getter @Setter
 @Entity
 public class Educacion {
     
@@ -18,37 +20,17 @@ public class Educacion {
     private int id;
     private String nombreE;
     private String descripcionE;
+    private String fechaInicioE;
+    private String fechaFinE;
 
     public Educacion() {
     }
 
-    public Educacion(String nombreE, String descripcionE) {
+    public Educacion(String nombreE, String descripcionE, String fechaInicioE, String fechaFinE) {
         this.nombreE = nombreE;
         this.descripcionE = descripcionE;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getNombreE() {
-        return nombreE;
-    }
-
-    public void setNombreE(String nombreE) {
-        this.nombreE = nombreE;
-    }
-
-    public String getDescripcionE() {
-        return descripcionE;
-    }
-
-    public void setDescripcionE(String descripcionE) {
-        this.descripcionE = descripcionE;
+        this.fechaInicioE = fechaInicioE;
+        this.fechaFinE = fechaFinE;
     }
 
     

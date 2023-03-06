@@ -15,7 +15,7 @@
                 <div class="subtittle">
                     <div class="education_data">
                         <span class="education_description">{{Education.descripcionE}}</span>
-                        <span class="education_dates">FECHA INICIO - FECHA FIN</span>
+                        <span class="education_dates">{{Education.fechaInicioE}} - {{Education.fechaFinE}}</span>
                     </div>
                     <a routerLink="/editedu/{{Education.id}}" *ngIf="isLogged">
                         <i class="fa-regular fa-pen-to-square"></i>
