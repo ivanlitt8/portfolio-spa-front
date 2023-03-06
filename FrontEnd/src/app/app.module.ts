@@ -22,6 +22,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { interceptorProvider } from './services/interceptor-service';
 import { NewExperienceComponent } from './components/experience/new-experience.component';
 import { EditExperienceComponent } from './components/experience/edit-experience.component';
+import { NewEducationComponent } from './components/education/new-education.component';
+import { EditEducationComponent } from './components/education/edit-education.component';
 
 
 const appRoutes: Routes = [
@@ -43,6 +45,8 @@ const appRoutes: Routes = [
     PortfolioComponent,
     EditExperienceComponent,
     NewExperienceComponent,
+    NewEducationComponent,
+    EditEducationComponent,
   ],
   imports: [
     BrowserModule,

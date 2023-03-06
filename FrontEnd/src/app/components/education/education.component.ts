@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { PortfolioService } from 'src/app/services/portfolio.service';
+import { Education } from 'src/app/model/education';
+// import { PortfolioService } from 'src/app/services/portfolio.service';
+import { SEducacionService } from 'src/app/services/s-educacion.service';
+import { TokenService } from 'src/app/services/token.service';
 
 @Component({
   selector: 'app-education',
@@ -8,14 +11,39 @@ import { PortfolioService } from 'src/app/services/portfolio.service';
 })
 export class EducationComponent implements OnInit {
 
-  educationList: any;
+  educacion: Education[] = [];
 
-  constructor(private datosPortfolio:PortfolioService) { }
+  isLogged = false;
+
+  constructor(private educacionS: SEducacionService, private tokenService: TokenService) { }
 
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe((data:any)=>{
-      this.educationList=data.education;
-    })
+    this.cargarEducacion();
+    if (this.tokenService.getToken()) {
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
+  }
+
+  cargarEducacion(): void {
+    this.educacionS.lista().subscribe(
+      data => {
+        this.educacion = data;
+      }
+    )
+  }
+
+  delete(id?: number) {
+    if (id != undefined) {
+      this.educacionS.delete(id).subscribe(
+        data => {
+          this.cargarEducacion();
+        }, err => {
+          alert("No se pudo eliminar ")
+        }
+      )
+    }
   }
 
 }
