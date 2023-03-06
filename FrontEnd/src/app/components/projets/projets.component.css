@@ -1,10 +1,11 @@
 /*---------------------------Projets---------------------------*/
 
-.projets{
+.projets {
   position: relative;
   top: 80px;
 }
-.projets_grid{
+
+.projets_grid {
   display: grid;
   position: relative;
   top: -1200px;
@@ -13,20 +14,26 @@
   justify-content: center;
 }
 
-.projets_text{
+.tittle {
+  font-size: 40px;
+}
+
+.projets_text {
   position: relative;
   top: -1250px;
   text-align: center;
   margin: 20px;
   color: white;
 }
-.container_projects{
+
+.container_projects {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
 }
-.projets_card{
+
+.projets_card {
   width: 250px;
   height: 400px;
   background-color: #2D2C32;
@@ -34,24 +41,30 @@
   border-top-right-radius: 20%;
   border-bottom-left-radius: 10%;
 }
+
 .projets_card img {
   width: 100%;
   border-top-right-radius: 20%;
   height: 190px;
 }
-.projets_card_text{
+
+.projets_card_text {
   margin: 20px;
 }
+
 .projets_card_text p {
   font-size: 12px;
 }
+
 .projets_card_text h4 {
   color: #F76525;
 }
+
 .projets_card_text a {
   text-decoration: none;
   color: #F76525;
 }
+
 .projet_date {
   position: absolute;
   background-color: black;
@@ -59,35 +72,42 @@
   padding: 2px 5px;
   color: #F76525;
 }
-.projets_card img:hover{
+
+.projets_card img:hover {
   transform: translate(-10px);
   transition: .5s;
   box-shadow: 10px 10px #F76525;
 }
-@media screen and (max-width: 650px){
-    .container_projects{
-        flex-direction: column;
-        flex-wrap: nowrap;
-      }
-    .projets_card{
-        display: flex;
-        width: 100%;
-        height: 190px;
-        border-radius: 10px;
-    }
-    .projets_card img {
-        border-radius: 0px;
-        min-width: 200px;
-    }
-    .projets_card p{
-        font-size: 11px;
-        height: 90px;
-    }
-    .projets_card h4 {
-        font-size: 20px;    
-    }
-    .projets_card a span {
-        font-size: 14px;
-        float: right;
-    }
+
+@media screen and (max-width: 650px) {
+  .container_projects {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  .projets_card {
+    display: flex;
+    width: 100%;
+    height: 190px;
+    border-radius: 10px;
+  }
+
+  .projets_card img {
+    border-radius: 0px;
+    min-width: 200px;
+  }
+
+  .projets_card p {
+    font-size: 11px;
+    height: 90px;
+  }
+
+  .projets_card h4 {
+    font-size: 20px;
+  }
+
+  .projets_card a span {
+    font-size: 14px;
+    float: right;
+  }
 }

@@ -1,71 +1,142 @@
 /*---------------------------Education---------------------------*/
 
-.education h3{
+.education h3 {
   position: relative;
   top: -750px;
   text-align: left;
   color: white;
   margin-left: 10%;
 }
-.education_grid img{
+
+.tittle {
+  font-size: 40px;
+}
+
+.education_grid img {
   width: 100px;
   height: auto;
 }
-.educations{
+
+.educations {
   position: relative;
   top: -700px;
   display: grid;
   grid-template-columns: 20% auto;
   gap: 20px;
-  width: 70%;
+  width: 90%;
   margin: 0 auto;
   align-items: center;
   height: 130px;
 }
-.educations_text{
+
+.educations_text {
   text-align: left;
   color: white;
 }
-.educations_text h4{
+
+.educations_text h4 {
   color: #F76525;
   font-size: 1.5em;
 }
-.education_data{
+
+.education_data {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.educations img{
+
+.educations img {
   margin: 0 auto;
 }
-@media screen and (max-width: 800px){
 
-    .education_data span{
-        font-size: 14px;
-    }
-    .educations_text h4{
-        font-size: 18px;
-    }
-    .educations img{
-        width: 75px;
-    }
-    .educations{
-        gap: 30px;
-    }
+
+i.fa-regular.fa-pen-to-square {
+  color: white;
+  font-size: 26px;
+  margin-top: 10px;
 }
-@media screen and (max-width: 650px){
 
-    .educations{
-        width: 90%;
-    }  
-    .education_data span{
-        font-size: 12px;
-    }
-    .educations_text h4{
-        font-size: 16px;
-    }
-    .experience_text p{
-        width: 85%;
-    }
+i.fa-solid.fa-trash-can {
+  color: white;
+  font-size: 26px;
+  margin-right: 3px;
+}
+
+i.fa-solid.fa-trash-can:hover {
+  transition: 0.5seg;
+  color: orangered;
+}
+
+i.fa-regular.fa-pen-to-square:hover {
+  transition: 0.5seg;
+  color: orangered;
+}
+
+i.fa-solid.fa-circle-plus {
+  color: white;
+  margin-left: 20px;
+}
+
+i.fa-solid.fa-circle-plus:hover {
+  color: orangered;
+  transition: 0.5s;
+}
+
+.educations_tittle {
+  display: flex;
+  justify-content: space-between;
+}
+
+.subtittle {
+  display: flex;
+  justify-content: space-between;
+}
+
+.education_dates {
+  margin-right: 25px;
+  min-width: 220px;
+}
+
+.education_description {
+  min-width: 150px;
+}
+
+@media screen and (max-width: 800px) {
+
+  .education_data span {
+    font-size: 12px;
+  }
+
+  .educations_text h4 {
+    font-size: 18px;
+  }
+
+  .educations img {
+    width: 75px;
+  }
+
+  .educations {
+    gap: 30px;
+  }
+}
+
+
+@media screen and (max-width: 690px) {
+
+  .educations {
+    width: 80%;
+  }
+
+  .education_data span {
+    font-size: 10px;
+  }
+
+  .educations_text h4 {
+    font-size: 16px;
+  }
+
+  /* .experience_text p {
+    width: 85%;
+  } */
 }

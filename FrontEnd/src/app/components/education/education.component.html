@@ -4,32 +4,24 @@
     </h3>
     <div *ngFor="let Education of educacion" class="education_grid">
         <div class="educations">
-            <!-- <img [src]="education?.url"> -->
+            <img src="../../../assets/resources/enet.png" alt="">
             <div class="educations_text">
-                <h4>{{Education.nombreE}}</h4>
-                <div class="education_data">
-                    <span>{{Education.descripcionE}}</span>
-                    <span>FECHA INICIO - FECHA FIN</span>
+                <div class="educations_tittle">
+                    <h4>{{Education.nombreE}}</h4>
                     <a (click)="delete(Education.id)" *ngIf="isLogged">
                         <i class="fa-solid fa-trash-can"></i>
                     </a>
                 </div>
-                <a routerLink="/editedu/{{Education.id}}" *ngIf="isLogged">
-                    <i class="fa-regular fa-pen-to-square"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-    <!-- <div *ngFor="let education of educationList" class="education_grid">
-        <div class="educations">
-            <img [src]="education?.url">
-            <div class="educations_text">
-                <h4>{{education?.grade}}</h4>
-                <div class="education_data">
-                    <span>{{education?.place}}</span>
-                    <span>{{education?.start}} - {{education?.end}}</span>
+                <div class="subtittle">
+                    <div class="education_data">
+                        <span class="education_description">{{Education.descripcionE}}</span>
+                        <span class="education_dates">FECHA INICIO - FECHA FIN</span>
+                    </div>
+                    <a routerLink="/editedu/{{Education.id}}" *ngIf="isLogged">
+                        <i class="fa-regular fa-pen-to-square"></i>
+                    </a>
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
 </section>

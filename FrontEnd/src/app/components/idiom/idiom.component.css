@@ -1,16 +1,22 @@
 /*---------------------------Languages---------------------------*/
 
-.lang h3{
+.tittle {
+  font-size: 40px;
+}
+
+.lang h3 {
   position: relative;
   top: -1350px;
   color: white;
   text-align: center;
 }
-.lang{
+
+.lang {
   position: relative;
   top: 70px;
 }
-.lang_grid{
+
+.lang_grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 50%;
@@ -18,6 +24,7 @@
   top: -1300px;
   position: relative;
 }
+
 .lang_circle {
   width: 100px;
   height: 100px;
@@ -27,26 +34,31 @@
   background: #FFFFFF;
   display: flex;
 }
+
 .lang_circle h4 {
   font-size: 40px;
   text-align: center;
   margin: auto;
   color: #3E3E3E;
 }
+
 .lang_ {
   text-align: center;
   margin: 0 auto;
   color: white;
 }
+
 .lang_ h5 {
-  color: #F76525  ;
+  color: #F76525;
 }
-@media screen and (max-width: 800px){
-  .lang{
+
+@media screen and (max-width: 800px) {
+  .lang {
     position: relative;
     top: 60px;
   }
-  .lang_grid{
+
+  .lang_grid {
     width: 100%;
   }
 }
