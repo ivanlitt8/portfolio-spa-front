@@ -13,13 +13,16 @@ public class dtoServicio {
     
     @NotBlank
     private String descripcionS;
+    
+    private String imageS;
 
     public dtoServicio() {
     }
 
-    public dtoServicio(String nombreS, String descripcionS) {
+    public dtoServicio(String nombreS, String descripcionS, String imageS) {
         this.nombreS = nombreS;
         this.descripcionS = descripcionS;
+        this.imageS = imageS;
     }    
     
 }

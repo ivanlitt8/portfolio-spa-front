@@ -45,7 +45,7 @@ public class CServicio {
         if(sServicio.existsByNombreS(dtoServ.getNombreS()))
             return new ResponseEntity(new Mensaje("La experiencia ya existe"), HttpStatus.BAD_REQUEST);
         
-        Servicio servicio = new Servicio(dtoServ.getNombreS(), dtoServ.getDescripcionS());
+        Servicio servicio = new Servicio(dtoServ.getNombreS(), dtoServ.getDescripcionS(), dtoServ.getImageS());
         sServicio.save(servicio);
         
         return new ResponseEntity(new Mensaje("Experiencia agregada"), HttpStatus.OK);
@@ -65,6 +65,8 @@ public class CServicio {
         Servicio servicio = sServicio.getOne(id).get();
         servicio.setNombreS(dtoServ.getNombreS());
         servicio.setDescripcionS(dtoServ.getDescripcionS());
+        servicio.setImageS(dtoServ.getImageS());
+
         
         sServicio.save(servicio);
         return new ResponseEntity(new Mensaje("Experiencia actualizada"), HttpStatus.OK);

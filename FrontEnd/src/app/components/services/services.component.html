@@ -8,7 +8,9 @@
                 <a (click)="delete(Servicio.id)" *ngIf="isLogged">
                     <i class="fa-solid fa-trash-can"></i>
                 </a>
-                <!-- <i class={{service.icon}}></i> -->
+                <div class="service_image">
+                    <i class="{{Servicio.imageS}}"></i>
+                </div>
                 <a routerLink="/editserv/{{Servicio.id}}" *ngIf="isLogged">
                     <i class="fa-regular fa-pen-to-square"></i>
                 </a>

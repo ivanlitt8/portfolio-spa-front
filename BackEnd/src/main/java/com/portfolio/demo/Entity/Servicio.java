@@ -19,13 +19,15 @@ public class Servicio {
     
     private String nombreS;
     private String descripcionS;
+    private String imageS;
 
     public Servicio() {
     }
 
-    public Servicio(String nombreS, String descripcionS) {
+    public Servicio(String nombreS, String descripcionS, String imageS) {
         this.nombreS = nombreS;
         this.descripcionS = descripcionS;
+        this.imageS = imageS;
     }
     
 }

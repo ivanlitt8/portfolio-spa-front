@@ -92,13 +92,6 @@ i.fa-regular.fa-pen-to-square {
   font-size: 36px;
 }
 
-i.fa-regular.fa-pen-to-square {
-  position: absolute;
-  top: -10px;
-  right: -5px;
-  color: white;
-  font-size: 36px;
-}
 
 i.fa-regular.fa-pen-to-square:hover {
   color: orangered;

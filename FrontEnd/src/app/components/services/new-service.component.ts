@@ -12,6 +12,7 @@ export class NewServiceComponent implements OnInit {
 
   nombreS: string;
   descripcionS: string;
+  imageS: string;
 
   constructor(private sServicio: SServicioService, private router: Router) { }
 
@@ -19,7 +20,7 @@ export class NewServiceComponent implements OnInit {
   }
 
   onCreate(): void {
-    const servicio = new Servicio(this.nombreS, this.descripcionS);
+    const servicio = new Servicio(this.nombreS, this.descripcionS, this.imageS);
     this.sServicio.save(servicio).subscribe(
       data => {
         alert("Servicio agregado correctamente");
