@@ -10,6 +10,8 @@ import { NewServiceComponent } from './components/services/new-service.component
 import { EditServiceComponent } from './components/services/edit-service.component';
 import { NewProjectComponent } from './components/projets/new-project.component';
 import { EditProjectComponent } from './components/projets/edit-project.component';
+import { NewIdiomaComponent } from './components/idiom/new-idioma.component';
+import { EditIdiomaComponent } from './components/idiom/edit-idioma.component';
 
 const routes: Routes = [
   { path: '', component: PortfolioComponent },
@@ -22,6 +24,8 @@ const routes: Routes = [
   { path: 'editserv/:id', component: EditServiceComponent },
   { path: 'nuevoproyecto', component: NewProjectComponent },
   { path: 'editproyecto/:id', component: EditProjectComponent },
+  { path: 'nuevoidioma', component: NewIdiomaComponent },
+  { path: 'editidioma/:id', component: EditIdiomaComponent },
   { path: '', redirectTo: 'portfolio', pathMatch: 'full' }
 ];
 

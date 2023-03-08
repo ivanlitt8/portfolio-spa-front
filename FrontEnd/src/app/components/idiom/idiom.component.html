@@ -1,15 +1,24 @@
 <div class="lang">
-    <h3 class="tittle">Lenguagues</h3>
+    <h3 class="tittle">Lenguagues<a routerLink="/nuevoidioma" *ngIf="isLogged">
+            <i class="fa-solid fa-circle-plus"></i></a>
+    </h3>
     <div class="lang_grid">
-        <div class="lang_">
-            <div class="lang_circle"><h4>ES</h4></div>
-            <h4>Spanish</h4>
-            <h5>{{idiom?.spanish}}</h5>
-        </div>
-        <div class="lang_">
-            <div class="lang_circle"><h4>EN</h4></div>
-            <h4>English</h4>
-            <h5 id="sec2">{{idiom?.english}}</h5>
-        </div>
+        <ng-container *ngFor="let Idioma of idioma">
+            <div class="lang_">
+                <div class="lang_circle">
+                    <h4>{{Idioma.siglasI}}</h4>
+                </div>
+                <h4>{{Idioma.nombreI}}</h4>
+                <h5>{{Idioma.nivelI}}</h5>
+                <div class="lang_icons">
+                    <a routerLink="/editidioma/{{Idioma.id}}" *ngIf="isLogged">
+                        <i class="fa-regular fa-pen-to-square"></i>
+                    </a>
+                    <a (click)="delete(Idioma.id)" *ngIf="isLogged">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </a>
+                </div>
+            </div>
+        </ng-container>
     </div>
 </div>

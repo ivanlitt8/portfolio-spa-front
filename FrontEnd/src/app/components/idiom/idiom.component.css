@@ -52,6 +52,43 @@
   color: #F76525;
 }
 
+i.fa-solid.fa-circle-plus {
+  margin-left: 20px;
+  font-size: 40px;
+  color: white;
+}
+
+i.fa-solid.fa-circle-plus:hover {
+  cursor: pointer;
+  color: orangered;
+  transition: 0.5s;
+}
+
+i.fa-solid.fa-trash-can {
+  font-size: 24px;
+  color: white;
+}
+
+i.fa-regular.fa-pen-to-square {
+  font-size: 24px;
+  color: white;
+}
+
+i.fa-regular.fa-pen-to-square:hover {
+  color: orangered;
+  transition: 0.5s;
+}
+
+i.fa-solid.fa-trash-can:hover {
+  color: orangered;
+  transition: 0.5s;
+}
+
+.lang_icons {
+  display: flex;
+  justify-content: space-between;
+}
+
 @media screen and (max-width: 800px) {
   .lang {
     position: relative;

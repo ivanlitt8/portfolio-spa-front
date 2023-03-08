@@ -28,6 +28,8 @@ import { NewServiceComponent } from './components/services/new-service.component
 import { EditServiceComponent } from './components/services/edit-service.component';
 import { NewProjectComponent } from './components/projets/new-project.component';
 import { EditProjectComponent } from './components/projets/edit-project.component';
+import { NewIdiomaComponent } from './components/idiom/new-idioma.component';
+import { EditIdiomaComponent } from './components/idiom/edit-idioma.component';
 
 
 const appRoutes: Routes = [
@@ -55,6 +57,8 @@ const appRoutes: Routes = [
     EditServiceComponent,
     NewProjectComponent,
     EditProjectComponent,
+    NewIdiomaComponent,
+    EditIdiomaComponent,
   ],
   imports: [
     BrowserModule,
