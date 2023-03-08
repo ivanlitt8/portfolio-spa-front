@@ -8,6 +8,8 @@ import { NewEducationComponent } from './components/education/new-education.comp
 import { EditEducationComponent } from './components/education/edit-education.component';
 import { NewServiceComponent } from './components/services/new-service.component';
 import { EditServiceComponent } from './components/services/edit-service.component';
+import { NewProjectComponent } from './components/projets/new-project.component';
+import { EditProjectComponent } from './components/projets/edit-project.component';
 
 const routes: Routes = [
   { path: '', component: PortfolioComponent },
@@ -18,6 +20,8 @@ const routes: Routes = [
   { path: 'editedu/:id', component: EditEducationComponent },
   { path: 'nuevoserv', component: NewServiceComponent },
   { path: 'editserv/:id', component: EditServiceComponent },
+  { path: 'nuevoproyecto', component: NewProjectComponent },
+  { path: 'editproyecto/:id', component: EditProjectComponent },
   { path: '', redirectTo: 'portfolio', pathMatch: 'full' }
 ];
 

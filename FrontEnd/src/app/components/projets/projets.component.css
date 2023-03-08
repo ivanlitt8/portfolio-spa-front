@@ -79,6 +79,50 @@
   box-shadow: 10px 10px #F76525;
 }
 
+i.fa-solid.fa-circle-plus {
+  color: white;
+  margin-left: 20px;
+
+}
+
+i.fa-solid.fa-circle-plus:hover {
+  color: orangered;
+  transition: 0.5s;
+}
+
+i.fa-solid.fa-trash-can {
+  position: absolute;
+  font-size: 36px;
+  bottom: 0;
+  right: 0;
+}
+
+i.fa-solid.fa-trash-can:hover {
+  color: orangered;
+  transition: 0.5s;
+  rotate: 45deg;
+}
+
+.projets_card {
+  position: relative;
+}
+
+i.fa-regular.fa-pen-to-square {
+  position: absolute;
+  color: white;
+  font-size: 36px;
+  bottom: 0;
+  left: 0;
+}
+
+i.fa-regular.fa-pen-to-square:hover {
+  color: orangered;
+  transition: 0.5s;
+  transform: translate(5px) scale(1.1);
+}
+
+
+
 @media screen and (max-width: 650px) {
   .container_projects {
     flex-direction: column;

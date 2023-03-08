@@ -36,15 +36,10 @@
   box-shadow: 10px 10px;
 }
 
-/* .service i {
-  color: #F76525;
-  font-size: 80px;
-} */
-
 .service h5 {
-  padding-top: 24px;
   font-size: 24px;
   color: white;
+  padding-top: 15px;
 }
 
 .service p {
@@ -95,7 +90,14 @@ i.fa-regular.fa-pen-to-square {
 
 i.fa-regular.fa-pen-to-square:hover {
   color: orangered;
-  transition: 0.2s;
-  transform: translate(5px);
-  transform: scale(1.1);
+  transition: 0.5s;
+  transform: translate(5px) scale(1.1);
+}
+
+.service_image i {
+  position: relative;
+  top: 0px;
+  right: 0px;
+  font-size: 70px;
+  color: orangered;
 }
