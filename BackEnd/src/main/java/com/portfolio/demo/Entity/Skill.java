@@ -18,17 +18,17 @@ public class Skill {
     private int id;
     
     private String nombreSk;
+    private String typeSk;
     private int porcentajeSk;
     private String imageSk;
 
     public Skill() {
     }
 
-    public Skill(String nombreSk, int porcentajeSk, String imageSk) {
+    public Skill(String nombreSk, String typeSk, int porcentajeSk, String imageSk) {
         this.nombreSk = nombreSk;
+        this.typeSk = typeSk;
         this.porcentajeSk = porcentajeSk;
         this.imageSk = imageSk;
     }
-    
-    
 }

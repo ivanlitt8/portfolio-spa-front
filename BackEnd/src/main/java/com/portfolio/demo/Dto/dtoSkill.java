@@ -11,6 +11,8 @@ public class dtoSkill {
     @NotBlank
     private String nombreSk;
     @NotBlank
+    private String typeSk;
+    @NotBlank
     private int porcentajeSk;
     
     private String imageSk;
@@ -18,8 +20,9 @@ public class dtoSkill {
     public dtoSkill() {
     }
     
-    public dtoSkill(String nombreSk, int porcentajeSk, String imageSk) {
+    public dtoSkill(String nombreSk, String typeSk, int porcentajeSk, String imageSk) {
         this.nombreSk = nombreSk;
+        this.typeSk = typeSk;
         this.porcentajeSk = porcentajeSk;
         this.imageSk = imageSk;
     }

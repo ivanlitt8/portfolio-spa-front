@@ -13,6 +13,7 @@ import { EditProjectComponent } from './components/projets/edit-project.componen
 import { NewIdiomaComponent } from './components/idiom/new-idioma.component';
 import { EditIdiomaComponent } from './components/idiom/edit-idioma.component';
 import { NewSkillComponent } from './components/skills/new-skill.component';
+import { EditSkillComponent } from './components/skills/edit-skill.component';
 
 const routes: Routes = [
   { path: '', component: PortfolioComponent },
@@ -28,6 +29,7 @@ const routes: Routes = [
   { path: 'nuevoidioma', component: NewIdiomaComponent },
   { path: 'editidioma/:id', component: EditIdiomaComponent },
   { path: 'nuevaskill', component: NewSkillComponent },
+  { path: 'editskill/:id', component: EditSkillComponent },
   { path: '', redirectTo: 'portfolio', pathMatch: 'full' }
 ];
 

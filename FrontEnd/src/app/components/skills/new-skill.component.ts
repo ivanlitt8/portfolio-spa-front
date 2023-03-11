@@ -11,6 +11,7 @@ import { SSkillService } from 'src/app/services/s-skill.service';
 export class NewSkillComponent implements OnInit {
 
   nombreSk: string;
+  typeSk: string;
   porcentajeSk: number;
   imageSk: string;
 
@@ -20,7 +21,7 @@ export class NewSkillComponent implements OnInit {
   }
 
   onCreate(): void {
-    const skill = new Skill(this.nombreSk, this.porcentajeSk, this.imageSk);
+    const skill = new Skill(this.nombreSk, this.typeSk, this.porcentajeSk, this.imageSk);
     this.sSkill.save(skill).subscribe(
       data => {
         alert("Skill agregada correctamente");

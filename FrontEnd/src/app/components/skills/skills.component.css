@@ -25,6 +25,7 @@ circle {
   fill: none;
   stroke-width: 10px;
   stroke-dasharray: 310;
+  stroke-linecap: round;
   transform: rotate(-90deg);
   transform-origin: 50%;
   stroke: #2D2C32;
@@ -34,7 +35,6 @@ circle {
   fill: none;
   stroke: url(#gradiente-stroke);
   stroke-dasharray: var(--porcentaje) 310;
-  stroke-linecap: round;
   animation: carga 2s linear;
 }
 
@@ -72,7 +72,6 @@ svg {
   gap: 30px;
   padding-left: 40px;
   padding-right: 40px;
-
 }
 
 .skillContainer {
@@ -81,12 +80,6 @@ svg {
   justify-content: center;
   position: relative;
   top: -1350px;
-}
-
-.frontContainer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 30px;
 }
 
 .progressCircle {
