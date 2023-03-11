@@ -4,10 +4,6 @@
   font-size: 40px;
 }
 
-.skills {
-  width: 100%;
-}
-
 .skills h3 {
   position: relative;
   top: -1370px;
@@ -15,271 +11,105 @@
   color: white;
 }
 
-.grid img {
-  width: 100px;
+i.fa-solid.fa-circle-plus {
+  color: white;
+  margin-left: 20px;
 }
 
-.grid {
-  position: relative;
-  top: -1350px;
-  margin: 0 auto;
-  width: 70%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  justify-content: center;
-}
-
-.grid div {
-  justify-items: center;
-  display: grid;
-  row-gap: 10px;
-}
-
-.grid_frontend {
-  grid-template-columns: 40% 40%;
-  justify-content: center;
-}
-
-.grid_backend {
-  position: absolute;
-  top: 50px;
-}
-
-.grid_db {
-  position: absolute;
-  top: 240px;
-}
-
-/*---------------------------Spinner---------------------------*/
-
-.skill {
-  height: 120px;
-}
-
-.outer {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  padding: 20px;
-}
-
-.inner {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#number {
-  color: #555;
-  font-weight: 600;
+i.fa-solid.fa-circle-plus:hover {
+  color: orangered;
+  transition: 0.5s;
 }
 
 circle {
   fill: none;
-  stroke: url(#GradientColor1);
   stroke-width: 10px;
-  stroke-dasharray: 472;
-  stroke-dashoffset: 472;
+  stroke-dasharray: 310;
+  transform: rotate(-90deg);
+  transform-origin: 50%;
+  stroke: #2D2C32;
 }
 
-.rowOne {
+.progress {
+  fill: none;
+  stroke: url(#gradiente-stroke);
+  stroke-dasharray: var(--porcentaje) 310;
+  stroke-linecap: round;
+  animation: carga 2s linear;
+}
+
+
+.progressCircle {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.progressCircle img {
+  display: block;
+  margin: auto;
+}
+
+svg {
   position: absolute;
-  top: 75px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.myjava_progress {
-  position: absolute;
-  top: 25px;
+
+svg {
+  width: 120%;
+  max-width: 100%;
+  height: auto;
+  transform: translate(-50%, -50%) scale(1.2);
 }
 
-.rowTwo {
-  position: absolute;
-  top: 200px;
+.colum {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-left: 40px;
+  padding-right: 40px;
+
 }
 
-.rowThree {
-  position: absolute;
-  top: 330px;
+.skillContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  top: -1350px;
 }
 
-.mysql_progress {
-  position: absolute;
-  top: 25px;
+.frontContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
 }
 
-.figma {
-  animation: figma 2s linear forwards;
+.progressCircle {
+  display: flex;
 }
 
-.postman {
-  animation: postman 2s linear forwards;
+.colum h2 {
+  text-align: center;
 }
 
-.other {
-  animation: anim 2s linear forwards;
+.colum {
+  margin: 0px 30px 0px 30px;
 }
 
-.github {
-  animation: github 2s linear forwards;
-}
-
-.angular {
-  animation: angular 2s linear forwards;
-}
-
-.bootstrap {
-  animation: bootstrap 2s linear forwards;
-}
-
-.jquery {
-  animation: jquery 2s linear forwards;
-}
-
-.javascript {
-  animation: javascript 2s linear forwards;
-}
-
-.css {
-  animation: css 2s linear forwards;
-}
-
-.html {
-  animation: html 2s linear forwards;
-}
-
-.java {
-  animation: java 2s linear forwards;
-}
-
-.mysql {
-  animation: mysql 2s linear forwards;
-}
 
 /*---------------------------KeyFrames---------------------------*/
 
-@keyframes mysql {
+@keyframes carga {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+
   100% {
-    stroke-dashoffset: 270;
-  }
-}
-
-@keyframes java {
-  100% {
-    stroke-dashoffset: 379;
-  }
-}
-
-@keyframes figma {
-  100% {
-    stroke-dashoffset: 224;
-  }
-}
-
-@keyframes postman {
-  100% {
-    stroke-dashoffset: 255;
-  }
-}
-
-@keyframes github {
-  100% {
-    stroke-dashoffset: 270;
-  }
-}
-
-@keyframes angular {
-  100% {
-    stroke-dashoffset: 317;
-  }
-}
-
-@keyframes bootstrap {
-  100% {
-    stroke-dashoffset: 210;
-  }
-}
-
-@keyframes jquery {
-  100% {
-    stroke-dashoffset: 193;
-  }
-}
-
-@keyframes javascript {
-  100% {
-    stroke-dashoffset: 239;
-  }
-}
-
-@keyframes css {
-  100% {
-    stroke-dashoffset: 200;
-  }
-}
-
-@keyframes html {
-  100% {
-    stroke-dashoffset: 162;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  .grid {
-    width: 100%;
-    top: -1400px;
-  }
-
-  .skills_1 {
-    width: 85%;
-    top: -1420px;
-  }
-
-  .skills h3 {
-    top: -1420px;
-  }
-}
-
-@media screen and (max-width: 650px) {
-  .rowOne {
-    top: 70px;
-  }
-
-  .grid {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
-
-  .grid_backend {
-    position: relative;
-    top: 0px;
-  }
-
-  .grid_db {
-    position: relative;
-    top: 0px;
-  }
-
-  .grid_frontend {
-    position: relative;
-  }
-
-  .gridFend h4 {
-    position: relative;
-    top: 30px;
-  }
-
-  .grid_back h4 {
-    position: relative;
-    top: 30px;
-  }
-
-  .grid_frontend svg {
-    position: relative;
-    top: -125px;
+    stroke-dasharray: var(--porcentaje) 310;
   }
 }

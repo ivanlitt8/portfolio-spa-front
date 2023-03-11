@@ -12,6 +12,7 @@ import { NewProjectComponent } from './components/projets/new-project.component'
 import { EditProjectComponent } from './components/projets/edit-project.component';
 import { NewIdiomaComponent } from './components/idiom/new-idioma.component';
 import { EditIdiomaComponent } from './components/idiom/edit-idioma.component';
+import { NewSkillComponent } from './components/skills/new-skill.component';
 
 const routes: Routes = [
   { path: '', component: PortfolioComponent },
@@ -26,6 +27,7 @@ const routes: Routes = [
   { path: 'editproyecto/:id', component: EditProjectComponent },
   { path: 'nuevoidioma', component: NewIdiomaComponent },
   { path: 'editidioma/:id', component: EditIdiomaComponent },
+  { path: 'nuevaskill', component: NewSkillComponent },
   { path: '', redirectTo: 'portfolio', pathMatch: 'full' }
 ];
 

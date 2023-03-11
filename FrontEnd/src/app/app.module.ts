@@ -30,7 +30,8 @@ import { NewProjectComponent } from './components/projets/new-project.component'
 import { EditProjectComponent } from './components/projets/edit-project.component';
 import { NewIdiomaComponent } from './components/idiom/new-idioma.component';
 import { EditIdiomaComponent } from './components/idiom/edit-idioma.component';
-
+import { NewSkillComponent } from './components/skills/new-skill.component';
+import { EditSkillComponent } from './components/skills/edit-skill.component';
 
 const appRoutes: Routes = [
 ]
@@ -59,6 +60,8 @@ const appRoutes: Routes = [
     EditProjectComponent,
     NewIdiomaComponent,
     EditIdiomaComponent,
+    NewSkillComponent,
+    EditSkillComponent,
   ],
   imports: [
     BrowserModule,
