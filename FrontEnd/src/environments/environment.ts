@@ -4,12 +4,14 @@
 
 export const environment = {
   firebase: {
-    projectId: 'portfofio-auth',
-    appId: '1:992868324180:web:09a0fb101d9bae1fe7eec1',
-    storageBucket: 'portfofio-auth.appspot.com',
-    apiKey: 'AIzaSyCo8RtsXMaVn0XhdOZJWfC65XOi8M7Ffe8',
-    authDomain: 'portfofio-auth.firebaseapp.com',
-    messagingSenderId: '992868324180',
+    projectId: 'portfoliospa-827ab',
+    appId: '1:539269684239:web:26eea446159cc546fcd77a',
+    storageBucket: 'portfoliospa-827ab.appspot.com',
+    locationId: 'southamerica-east1',
+    apiKey: 'AIzaSyAx8y3L20zQftA7ZUsUYgDqfyDw9zdmnEo',
+    authDomain: 'portfoliospa-827ab.firebaseapp.com',
+    messagingSenderId: '539269684239',
+    measurementId: 'G-G10Q57PVB4',
   },
   production: false
 };

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Skill } from 'src/app/model/skill';
+import { SImageService } from 'src/app/services/s-image.service';
 import { SSkillService } from 'src/app/services/s-skill.service';
 
 @Component({
@@ -15,7 +16,7 @@ export class NewSkillComponent implements OnInit {
   porcentajeSk: number;
   imageSk: string;
 
-  constructor(private sSkill: SSkillService, private router: Router) { }
+  constructor(private sSkill: SSkillService, private router: Router, public sImageService: SImageService, private activatedRouter: ActivatedRoute) { }
 
   ngOnInit(): void {
   }
@@ -33,4 +34,9 @@ export class NewSkillComponent implements OnInit {
     )
   }
 
+  // uploadImage($event: any) {
+  //   const id = this.activatedRouter.snapshot.params['id'];
+  //   const name = "skill_" + id;
+  //   this.sImageService.uploadImage($event, name)
+  // }
 }

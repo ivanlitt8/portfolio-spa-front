@@ -14,6 +14,7 @@ import { NewIdiomaComponent } from './components/idiom/new-idioma.component';
 import { EditIdiomaComponent } from './components/idiom/edit-idioma.component';
 import { NewSkillComponent } from './components/skills/new-skill.component';
 import { EditSkillComponent } from './components/skills/edit-skill.component';
+import { EditLandingComponent } from './components/landing/edit-landing.component';
 
 const routes: Routes = [
   { path: '', component: PortfolioComponent },
@@ -30,6 +31,7 @@ const routes: Routes = [
   { path: 'editidioma/:id', component: EditIdiomaComponent },
   { path: 'nuevaskill', component: NewSkillComponent },
   { path: 'editskill/:id', component: EditSkillComponent },
+  { path: 'editpersona/:id', component: EditLandingComponent },
   { path: '', redirectTo: 'portfolio', pathMatch: 'full' }
 ];
 

@@ -32,6 +32,8 @@ import { NewIdiomaComponent } from './components/idiom/new-idioma.component';
 import { EditIdiomaComponent } from './components/idiom/edit-idioma.component';
 import { NewSkillComponent } from './components/skills/new-skill.component';
 import { EditSkillComponent } from './components/skills/edit-skill.component';
+import { EditLandingComponent } from './components/landing/edit-landing.component';
+import { provideStorage,getStorage } from '@angular/fire/storage';
 
 const appRoutes: Routes = [
 ]
@@ -62,6 +64,7 @@ const appRoutes: Routes = [
     EditIdiomaComponent,
     NewSkillComponent,
     EditSkillComponent,
+    EditLandingComponent,
   ],
   imports: [
     BrowserModule,
@@ -71,7 +74,8 @@ const appRoutes: Routes = [
     FormsModule,
     RouterModule.forRoot(appRoutes),
     provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideAuth(() => getAuth())
+    provideAuth(() => getAuth()),
+    provideStorage(() => getStorage())
   ],
   providers: [
     interceptorProvider

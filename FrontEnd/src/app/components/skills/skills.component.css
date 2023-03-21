@@ -94,6 +94,21 @@ svg {
   margin: 0px 30px 0px 30px;
 }
 
+.iconsSkill {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.iconsSkill i {
+  color: white;
+}
+
+.iconsSkill i:hover {
+  color: orangered;
+  transition: 0.5s;
+}
 
 /*---------------------------KeyFrames---------------------------*/
 
