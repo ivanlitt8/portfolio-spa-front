@@ -22,6 +22,9 @@ export class LoginComponent implements OnInit {
 
   public formLogin!: FormGroup;
 
+  showUserLabel = true;
+  showPasswordLabel = true;
+
   constructor(private tokenService: TokenService, private authService: AuthService, private router: Router) {
 
   }
@@ -50,6 +53,20 @@ export class LoginComponent implements OnInit {
       this.errMsj = err.error.mensaje;
       console.log(this.errMsj);
     })
+  }
+
+  onInput() {
+    if (this.nombreUsuario) {
+      this.showUserLabel = false;
+    } else {
+      this.showUserLabel = true;
+    }
+
+    if (this.password) {
+      this.showPasswordLabel = false;
+    } else {
+      this.showPasswordLabel = true;
+    }
   }
 
 }

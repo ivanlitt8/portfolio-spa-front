@@ -33,10 +33,4 @@ export class NewSkillComponent implements OnInit {
       }
     )
   }
-
-  // uploadImage($event: any) {
-  //   const id = this.activatedRouter.snapshot.params['id'];
-  //   const name = "skill_" + id;
-  //   this.sImageService.uploadImage($event, name)
-  // }
 }

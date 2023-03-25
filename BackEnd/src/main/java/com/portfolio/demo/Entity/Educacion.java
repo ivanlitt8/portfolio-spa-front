@@ -22,15 +22,17 @@ public class Educacion {
     private String descripcionE;
     private String fechaInicioE;
     private String fechaFinE;
+    private String imagenE;
 
     public Educacion() {
     }
 
-    public Educacion(String nombreE, String descripcionE, String fechaInicioE, String fechaFinE) {
+    public Educacion(String nombreE, String descripcionE, String fechaInicioE, String fechaFinE, String imagenE) {
         this.nombreE = nombreE;
         this.descripcionE = descripcionE;
         this.fechaInicioE = fechaInicioE;
         this.fechaFinE = fechaFinE;
+        this.imagenE = imagenE;
     }
 
     

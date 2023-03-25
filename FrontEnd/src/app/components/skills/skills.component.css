@@ -110,6 +110,11 @@ svg {
   transition: 0.5s;
 }
 
+.colum img {
+  width: 120px;
+}
+
+
 /*---------------------------KeyFrames---------------------------*/
 
 @keyframes carga {

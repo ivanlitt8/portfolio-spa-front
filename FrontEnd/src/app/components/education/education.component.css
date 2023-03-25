@@ -1,8 +1,13 @@
 /*---------------------------Education---------------------------*/
 
-.education h3 {
+.containerEducation {
   position: relative;
   top: -750px;
+  width: 100%;
+}
+
+.education h3 {
+  position: relative;
   text-align: left;
   color: white;
   margin-left: 10%;
@@ -19,11 +24,10 @@
 
 .educations {
   position: relative;
-  top: -700px;
   display: grid;
   grid-template-columns: 20% auto;
   gap: 20px;
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
   align-items: center;
   height: 130px;
@@ -95,7 +99,6 @@ i.fa-solid.fa-circle-plus:hover {
 
 .education_dates {
   margin-right: 25px;
-  min-width: 220px;
 }
 
 .education_description {
@@ -135,8 +138,17 @@ i.fa-solid.fa-circle-plus:hover {
   .educations_text h4 {
     font-size: 16px;
   }
+}
 
-  /* .experience_text p {
-    width: 85%;
-  } */
+
+@media screen and (max-width: 550) {
+
+  .educations {
+    width: 100%;
+    margin: 0px;
+  }
+
+  .educations_tittle h4 {
+    font-size: 12px;
+  }
 }

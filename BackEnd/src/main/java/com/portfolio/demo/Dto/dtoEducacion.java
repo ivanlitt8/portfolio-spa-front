@@ -16,15 +16,19 @@ public class dtoEducacion {
     private String fechaInicioE;
     
     private String fechaFinE;
+    private String imagenE;
+
+    
 
     public dtoEducacion() {
     }
 
-    public dtoEducacion(String nombreE, String descripcionE, String fechaInicioE, String fechaFinE) {
+    public dtoEducacion(String nombreE, String descripcionE, String fechaInicioE, String fechaFinE, String imagenE) {
         this.nombreE = nombreE;
         this.descripcionE = descripcionE;
         this.fechaInicioE = fechaInicioE;
         this.fechaFinE = fechaFinE;
+        this.imagenE = imagenE;
     }    
     
 }

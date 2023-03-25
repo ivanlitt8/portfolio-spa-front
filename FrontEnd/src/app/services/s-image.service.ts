@@ -10,14 +10,14 @@ export class SImageService {
 
   constructor(private storage: Storage) { }
 
-  public uploadImage($event: any, name: string) {
+  public uploadImage($event: any, name: string, folder: string = 'image') {
     const file = $event.target.files[0];
-    const imageRef = ref(this.storage, 'image/' + name);
-    uploadBytes(imageRef, file).then(res => { this.getImages() }).catch(err => console.log(err));
+    const imageRef = ref(this.storage, folder + '/' + name);
+    uploadBytes(imageRef, file).then(res => { this.getImages(folder) }).catch(err => console.log(err));
   }
 
-  getImages() {
-    const imagesRef = ref(this.storage, 'image')
+  getImages(folder: string = 'image') {
+    const imagesRef = ref(this.storage, folder)
     list(imagesRef).then(async res => {
       for (let item of res.items) {
         this.url = await getDownloadURL(item);

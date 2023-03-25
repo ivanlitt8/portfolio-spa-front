@@ -122,7 +122,6 @@ i.fa-regular.fa-pen-to-square:hover {
 }
 
 
-
 @media screen and (max-width: 650px) {
   .container_projects {
     flex-direction: column;
@@ -154,4 +153,23 @@ i.fa-regular.fa-pen-to-square:hover {
     font-size: 14px;
     float: right;
   }
+}
+
+@media screen and (max-width: 650px) {
+  .projets_text p {
+    font-size: 16px;
+  }
+}
+
+
+@media screen and (max-width: 432px) {
+  .projets_card_text {
+    margin: 8px;
+  }
+
+  .projets_card_text p {
+    font-size: 10px;
+    line-height: 10px;
+  }
+
 }

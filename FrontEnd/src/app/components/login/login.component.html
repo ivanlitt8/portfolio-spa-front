@@ -5,31 +5,18 @@
         <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
             <div class="txt_field">
                 <input type="text" id="nombreUsuario" name="nombreUsuario" class="form-control form-control lg"
-                    [(ngModel)]="nombreUsuario" required />
-                <label class="form-label" for="nombreUsuario">Usuario</label>
+                    [(ngModel)]="nombreUsuario" (input)="onInput()" required />
+                <label class="form-label" for="nombreUsuario" *ngIf="showUserLabel">Usuario</label>
                 <span></span>
-                <!-- <div>
-                    <p class="text-danger">
-                        Email is required
-                    </p>
-                    <p class="text-danger">
-                        The email format must be valid
-                    </p>
-                </div> -->
             </div>
             <div class="txt_field">
                 <input type="password" id="password" name="password" class="form-control form-control lg"
-                    [(ngModel)]="password" required />
+                    [(ngModel)]="password" (input)="onInput()" required />
                 <span></span>
-                <label class="form-label" for="password">Password</label>
-                <!-- <div>
-                    <p class="text-danger">
-                        Password is required
-                    </p>
-                </div> -->
+                <label class="form-label" for="password" *ngIf="showPasswordLabel">Password</label>
             </div>
-            <div class="pass">¿Forgot password?</div>
-            <div class="pass">Create an account</div>
+            <!-- <div class="pass">¿Forgot password?</div>
+            <div class="pass">Create an account</div> -->
             <input class="submitButton" type="submit" value="Login">
             <span class="copyright">© Ivan Litt - All rights reserved</span>
         </form>

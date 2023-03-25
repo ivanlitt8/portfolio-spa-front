@@ -1,25 +1,27 @@
 <section class="education">
-    <h3 class="tittle">Education<a routerLink="/nuevaedu" *ngIf="isLogged">
-            <i class="fa-solid fa-circle-plus"></i></a>
-    </h3>
-    <div *ngFor="let Education of educacion" class="education_grid">
-        <div class="educations">
-            <img src="../../../assets/resources/enet.png" alt="">
-            <div class="educations_text">
-                <div class="educations_tittle">
-                    <h4>{{Education.nombreE}}</h4>
-                    <a (click)="delete(Education.id)" *ngIf="isLogged">
-                        <i class="fa-solid fa-trash-can"></i>
-                    </a>
-                </div>
-                <div class="subtittle">
-                    <div class="education_data">
-                        <span class="education_description">{{Education.descripcionE}}</span>
-                        <span class="education_dates">{{Education.fechaInicioE}} - {{Education.fechaFinE}}</span>
+    <div class="containerEducation">
+        <h3 class="tittle">Education<a routerLink="/nuevaedu" *ngIf="isLogged">
+                <i class="fa-solid fa-circle-plus"></i></a>
+        </h3>
+        <div *ngFor="let Education of educacion" class="education_grid">
+            <div class="educations">
+                <img src="{{Education.imagenE}}" alt="project">
+                <div class="educations_text">
+                    <div class="educations_tittle">
+                        <h4>{{Education.nombreE}}</h4>
+                        <a (click)="delete(Education.id)" *ngIf="isLogged">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </a>
                     </div>
-                    <a routerLink="/editedu/{{Education.id}}" *ngIf="isLogged">
-                        <i class="fa-regular fa-pen-to-square"></i>
-                    </a>
+                    <div class="subtittle">
+                        <div class="education_data">
+                            <span class="education_description">{{Education.descripcionE}}</span>
+                            <span class="education_dates">{{Education.fechaInicioE}} - {{Education.fechaFinE}}</span>
+                        </div>
+                        <a routerLink="/editedu/{{Education.id}}" *ngIf="isLogged">
+                            <i class="fa-regular fa-pen-to-square"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

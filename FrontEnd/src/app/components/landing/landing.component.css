@@ -9,12 +9,15 @@
 }
 
 .about {
-  position: absolute;
   font-family: 'DM Sans';
   padding-left: 100px;
   padding-top: 70px;
   margin: 50px 0px;
-  width: 100%;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
 }
 
 .about_stack h2 {
@@ -85,14 +88,18 @@ i.fa-regular.fa-pen-to-square:hover {
 }
 
 .contact {
-  position: absolute;
-  top: 465px;
-  left: 450px;
   width: 200px;
   height: 40px;
   border-radius: 10px;
   border: 1px solid #868490;
   text-align: center;
+}
+
+.containerContact {
+  width: 100%;
+  padding-top: 15px;
+  display: flex;
+  justify-content: center;
 }
 
 .contact h4 {
@@ -132,16 +139,11 @@ i.fa-regular.fa-pen-to-square:hover {
 
 @media screen and (max-width: 800px) {
   .contact {
-    position: absolute;
-    top: 490px;
-    left: 100px;
     width: 200px;
     height: 40px;
     border-radius: 10px;
     border: 1px solid #868490;
     text-align: center;
-    top: 470px;
-    left: 50px;
   }
 
   .about_locate {
@@ -186,7 +188,7 @@ i.fa-regular.fa-pen-to-square:hover {
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 470px) {
   .about {
     padding: 60px 10px;
     margin-left: 5%;
@@ -194,5 +196,39 @@ i.fa-regular.fa-pen-to-square:hover {
 
   .about h1 {
     line-height: 90px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .about h1 {
+    font-size: 50px;
+  }
+
+  .about_text p {
+    font-size: 12px;
+  }
+
+  .about_stack h2 {
+    font-size: 35px;
+  }
+
+  .about {
+    z-index: 200;
+  }
+
+  .miguel {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 302px) {
+  .contact {
+    background-color: #292664;
+    border: #212529;
+  }
+
+  .about h1 {
+    line-height: 50px;
+    padding: 10px 0px 10px 0px;
   }
 }
