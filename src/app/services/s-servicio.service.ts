@@ -1,13 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { Servicio } from '../model/servicio';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SServicioService {
-  URL = 'http://localhost:8080/services/'
+  URL = environment.URL + 'services/'
 
   constructor(private httpClient: HttpClient) { }
 

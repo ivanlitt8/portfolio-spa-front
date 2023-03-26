@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { Idioma } from '../model/idioma';
 
 @Injectable({
@@ -8,7 +9,7 @@ import { Idioma } from '../model/idioma';
 })
 export class SIdiomaService {
 
-  URL = 'http://localhost:8080/idiomas/'
+  URL = environment.URL + 'idiomas/'
 
   constructor(private httpClient: HttpClient) { }
 
