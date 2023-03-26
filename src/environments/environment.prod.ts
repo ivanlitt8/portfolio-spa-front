@@ -9,5 +9,7 @@ export const environment = {
     messagingSenderId: '539269684239',
     measurementId: 'G-G10Q57PVB4',
   },
-  production: true
+  production: true,
+  URL: 'https://portfolio-backend-izsb.onrender.com/'
+  //URL: 'http://localhost:8080/'
 };
