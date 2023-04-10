@@ -1,4 +1,4 @@
-# Portfolio web
+# Portfolio web - Frontend
 Este es el repositorio del frontend de mi aplicación de Portfolio web. La aplicación cuenta con un diseño hecho en Figma de autoría propia, y está construida utilizando Angular y Bootstrap para la interfaz de usuario.
 
 ## Enlaces
