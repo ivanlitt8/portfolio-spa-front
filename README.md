@@ -2,8 +2,8 @@
 Este es el repositorio del frontend de mi aplicación de Portfolio web. La aplicación cuenta con un diseño hecho en Figma de autoría propia, y está construida utilizando Angular y Bootstrap para la interfaz de usuario.
 
 ## Enlaces
-[Repositorio del backend]:https://ivan-portfolio-app.web.app/
-[Acceso a la aplicación en línea]:https://github.com/ivanlitt8/portfolio-spa-back
+- [Repositorio del backend](https://ivan-portfolio-app.web.app/)
+- [Acceso a la aplicación](https://github.com/ivanlitt8/portfolio-spa-back)
 
 ## Funcionalidades
 La aplicación cuenta con las siguientes funcionalidades:
